@@ -5,8 +5,13 @@
 #     - /bin/cp index.html $DEPLOYPATH
 #     - /bin/cp styles.css $DEPLOYPATH
 
----
+# ---
+# deployment:
+#   tasks:
+#     - export DEPLOYPATH=/home/kissmobi/repositories/Kiss_Mobile
+#     - /bin/cp -R images $DEPLOYPATH
+
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kissmobi/repositories/Kiss_Mobile
-    - /bin/cp -R images $DEPLOYPATH
+    - export DEPLOYPATH=/home/kissmobi/public_html
+    - /bin/cp -R /home/kissmobi/repositories/Kiss_Mobile/* $DEPLOYPATH
